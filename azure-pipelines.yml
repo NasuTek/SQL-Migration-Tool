@@ -21,6 +21,7 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+    clean: true
 
 - task: VSTest@2
   inputs:
@@ -29,6 +30,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.SourcesDirectory)/NasuTek.MigrationTool/bin/$(buildConfiguration)/net-7.0/'
+    PathtoPublish: '$(Build.SourcesDirectory)/NasuTek.MigrationTool/bin/$(buildConfiguration)/net7.0/'
     ArtifactName: 'drop'
     publishLocation: 'Container'
