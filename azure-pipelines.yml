@@ -4,6 +4,9 @@ trigger:
 pool:
   name: default
 
+workspace:
+  clean: all
+
 variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
